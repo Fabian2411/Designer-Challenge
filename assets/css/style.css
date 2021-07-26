@@ -118,9 +118,25 @@ header a{
     color: #ff3571;
 }
   
-header img{
+.fallingMan{
     width: 50vw;
     margin-right: 3vw;
+    position: relative;
+    animation: fallingMan 5s infinite;
+}
+
+@keyframes fallingMan {
+    0% {top: 0px;}
+    25% {top: 25px;}
+    50% {top: 0px;}
+    75% {top: 25px;}
+    100% {top: 0px;}
+}
+
+.rocket{
+    margin: 0;
+    padding: 0;
+    width: 2.5vw;
 }
 
 
@@ -149,14 +165,13 @@ main section:nth-of-type(2) article{
     margin-right: 10vw;
 }
 
-.glühbirne{
-    display: flex;
-}
 
-.lampe{
-    border: solid 1px;
-    height: 40%; /*Positionieren der Glühbirne ohne anderen Text zu bewegen klappt nicht*/
-}
+/* .glühbirne{
+    margin: 0;
+    padding: 0;
+    width: 80px;
+} */
+/* wie kann ich die Größe ändern, ohne, dass sich der Text verändert? mit margin & padding 0 noch arbeiten? */
 
 /*<!--------------------- Section3 --------------------->*/
 main section:nth-of-type(3) h3{
@@ -184,6 +199,7 @@ main section:nth-of-type(3) h3{
 
 .articleUeberschrift{
     font-size: 1.2em;
+    margin-left: 2vw;
 }
 
 .articleDreiUndVier{
@@ -202,6 +218,17 @@ main section:nth-of-type(3) h3{
     margin-right: 10%;
 }
 
+.svg{
+    display: flex;
+}
+
+.svgBild{
+    width: 2.5vw;
+}
+
+.textSvg{
+    padding-left: 4.5vw;
+}
 
 /*<!--------------------- Section4 / 5 --------------------->*/
 .section4und5{
@@ -263,7 +290,6 @@ main section:nth-of-type(3) h3{
 /*<!--------------------- Section5 --------------------->*/
 #email{
     background-color: #dddddd;
-    /*wo ist der Unterschied zwischen der Nutzung der vorgeschlagenen ID und input{*/
     margin-top: 3%;
     height: 2%;
 }
